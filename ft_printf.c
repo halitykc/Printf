@@ -5,11 +5,12 @@
 static int	format_type(int spe, va_list ap)
 {
 	int	count;
+
 	count = 0;
 	if (spe  == 's')
 		count += ft_print_s(va_arg(ap, char *));
 	else if (spe == 'i' || spe == 'd')
-		count += ft_print_d_i(va_arg(ap, int)); //
+		count += ft_print_d_i(va_arg(ap, int));
 	else if (spe == 'c')
 		count += ft_print_c(va_arg(ap, int));   
 	else if (spe == '%')
@@ -18,6 +19,10 @@ static int	format_type(int spe, va_list ap)
 		count += ft_print_p((unsigned long int) va_arg(ap,void *));
 	else if (spe == 'u')
 		count += ft_print_u((unsigned int)va_arg(ap,int));
+	else if (spe == 'x')
+		count += ft_print_x((unsigned int)va_arg(ap, int));
+	else if (spe == 'X')
+		count += ft_print_upperx((unsigned int)va_arg(ap, int));
 	return (count);
 }
 
@@ -58,7 +63,8 @@ int main(void)
 
 	printf("%i, %i\n",a ,b);
 
-
+	printf("%X\n", 255);
+	ft_printf("%X", 255);
 
     return 0;
 }
