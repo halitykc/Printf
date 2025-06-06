@@ -14,7 +14,7 @@ $(NAME): $(OBJS)
 	$(CC) -c $(CFLAGS) $< -o $@
 
 run :
-	$(CC) $(CFLAGS) ft_printf.c libftprintf.a ../libft/libft.a
+	$(CC) $(CFLAGS) ft_printf.c libftprintf.a
 	./a.out
 
 clean:

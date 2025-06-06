@@ -1,6 +1,4 @@
 
-#include "../libft/libft.h"
-#include <stdio.h>
 #include "libftprintf.h"
 static int    ft_print_adr(unsigned long adr)
 {
