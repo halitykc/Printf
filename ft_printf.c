@@ -51,20 +51,16 @@ int	ft_printf(const char *format, ...)
 
 
 
-#include <stdio.h>
-int main(void)
-{
-	// char c = 'a';
-	// char *str = "yakici";
-	int i = 4294967295;
-	int a,b;
-	a = ft_printf("mine %u halit\n",i);
-	b = printf("orgn %u halit\n",i);
+// #include <stdio.h>
+// int main(void)
+// {
+// 	// char c = 'a';
+// 	// char *str = "yakici";
+// 	int i = 4294967295;
+// 	int a,b;
+// 	a = ft_printf("Selam ben %s %c %p %u %i %d %x %X\n","halit", 'A',&i, -1, __INT32_MAX__, __INT32_MAX__, 255,-1);
+// 	b = printf("Selam ben %s %c %p %u %i %d %x %X\n","halit", 'A',&i, -1, __INT32_MAX__, __INT32_MAX__, 255,-1);
 
-	printf("%i, %i\n",a ,b);
-
-	printf("%X\n", 255);
-	ft_printf("%X", 255);
-
-    return 0;
-}
+// 	printf("%i, %i\n",a ,b);
+//     return 0;
+// }
