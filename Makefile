@@ -2,7 +2,7 @@
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = ft_printc.c  ft_printp.c  ft_prints.c	ft_printid.c ft_printu.c ft_print_x.c ft_print_upperx.c
+SRCS =  ft_printf.c ft_printc.c  ft_printp.c  ft_prints.c ft_printid.c ft_printu.c ft_print_x.c ft_print_upperx.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
@@ -12,10 +12,6 @@ $(NAME): $(OBJS)
 
 %.o : %.c
 	$(CC) -c $(CFLAGS) $< -o $@
-
-run :
-	$(CC) $(CFLAGS) ft_printf.c libftprintf.a
-	./a.out
 
 clean:
 	rm -rf $(OBJS)

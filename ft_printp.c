@@ -16,6 +16,11 @@ int	ft_print_p(unsigned long adr)
 {
 	int count;
 
+	if (!adr)
+	{
+		return (ft_print_s("(nil)"));
+	}
+	
 	count = 0;
 	count += ft_print_s("0x");
 	count += ft_print_adr(adr);
